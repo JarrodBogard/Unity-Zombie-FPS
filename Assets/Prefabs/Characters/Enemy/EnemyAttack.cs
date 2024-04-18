@@ -20,4 +20,11 @@ public class EnemyAttack : MonoBehaviour
         // target.GetComponent<PlayerHealth>().TakeDamage(damage);
         // Debug.Log("Target has been hit");
     }
+
+    // ONLY USED FOR 'BroadcastMessage' EXAMPLE //
+
+    public void OnDamageTaken()
+    {
+        Debug.Log($"Damage has been taken by: {name}");
+    }
 }
