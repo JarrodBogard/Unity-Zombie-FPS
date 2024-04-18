@@ -11,7 +11,7 @@ public class EnemyHealth : MonoBehaviour
         hitPoints -= damage;
         if (hitPoints <= 0)
         {
-            Debug.Log("Enemy destroyed.");
+            // Debug.Log("Enemy destroyed.");
             Destroy(gameObject);
         }
     }
