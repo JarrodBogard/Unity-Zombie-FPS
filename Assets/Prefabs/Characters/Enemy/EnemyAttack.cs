@@ -22,9 +22,4 @@ public class EnemyAttack : MonoBehaviour
     }
 
     // ONLY USED FOR 'BroadcastMessage' EXAMPLE //
-
-    public void OnDamageTaken()
-    {
-        Debug.Log($"Damage has been taken by: {name}");
-    }
 }

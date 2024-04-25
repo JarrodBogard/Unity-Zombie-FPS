@@ -261,8 +261,9 @@ GameObject:
   - component: {fileID: 2337074158996965286}
   - component: {fileID: 2337074159000356742}
   - component: {fileID: 2337074158999389510}
+  - component: {fileID: 9031565130783994605}
   m_Layer: 0
-  m_Name: Carbine
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 2, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2337074158996965284}
@@ -317,7 +318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49858ecb46223404b8475b34c72be073, type: 2}
+  - {fileID: 2100000, guid: 32b6c6c9e76a7a6488f8a6f7641c06ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -339,6 +340,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9031565130783994605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0dc194aff6e7c4a92887dfccc72837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPCamera: {fileID: 0}
+  muzzleFlash: {fileID: 6576834073719978539}
+  hitEffect: {fileID: 6741657052899453726, guid: a24ea7ae694d1e944a2b29d078414d0f, type: 3}
+  ammoSlot: {fileID: 0}
+  ammoType: 1
+  range: 10
+  damage: 50
+  timeBetweenShots: 1
 --- !u!1 &2337074158997199752
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +698,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88b4e814b13e393488cee1f19f82a892, type: 3}
+--- !u!198 &6576834073719978539 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5070846346106491112, guid: 88b4e814b13e393488cee1f19f82a892, type: 3}
+  m_PrefabInstance: {fileID: 2097226467023809219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8087080211506804782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7863791578772689645, guid: 88b4e814b13e393488cee1f19f82a892, type: 3}
