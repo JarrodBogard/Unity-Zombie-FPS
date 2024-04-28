@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
-    // [Serialize]
+    [SerializeField] TextMeshProUGUI ammoText;
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 25f;
     [SerializeField] float timeBetweenShots = .5f;
@@ -29,6 +30,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        DisplayAmmo();
         // if (Input.GetButtonDown("Fire1"))
         if (Input.GetButtonDown("Fire1") && canShoot)
         {
@@ -37,6 +39,12 @@ public class Weapon : MonoBehaviour
         }
 
         eventSystem = FindObjectOfType<EventSystem>();
+    }
+
+    void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        ammoText.text = currentAmmo.ToString();
     }
 
     // void Shoot()
