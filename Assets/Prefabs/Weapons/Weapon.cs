@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
+    // [Serialize]
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 25f;
     [SerializeField] float timeBetweenShots = .5f;
