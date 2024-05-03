@@ -11,7 +11,7 @@ public class BatteryPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Player picked up battery");
+            // Debug.Log("Player picked up battery");
             other.GetComponentInChildren<FlashlightSystem>().AddLightIntensity(addIntensity);
             other.GetComponentInChildren<FlashlightSystem>().RestoreLightAngle(restoreAngle);
             Destroy(gameObject);
